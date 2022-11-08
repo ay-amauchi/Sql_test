@@ -17,4 +17,6 @@ class Customer(Base):
     __tablename__ = "customer"
 
 
+Base.metadata.create_all(bind=engine)
+
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
